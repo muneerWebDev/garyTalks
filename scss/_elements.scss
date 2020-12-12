@@ -1,0 +1,148 @@
+@mixin caption_style {
+    //caption style
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: #4A4A4A;
+    font-weight: 600;
+}
+
+.caption {
+    @include caption_style();
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include media-breakpoint-down(lg) {
+        font-size: 51.62%;
+    }
+
+    //1px = .1rem (font sizes are set in rem for easy responsivenes)
+}
+
+body {
+    font-size: 1.3rem;
+    font-family: 'Source Sans Pro', serif;
+    margin: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+
+    &.author {
+        font-weight: 300;
+        font-style: italic;
+    }
+}
+
+h1 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 7rem;
+    line-height: 8rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 3rem;
+    line-height: 4.1rem;
+    color: #000;
+    font-weight: 700;
+
+}
+
+
+h3 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1.8rem;
+}
+
+.overflow-heading {
+    margin-right: -10rem;
+    max-width: calc(100vw - 30px);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        width: 100%;
+    }
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+    color: #4A4A4A;
+    font-weight: 400;
+}
+
+a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+    transition: .3s;
+    font-weight: 400;
+    line-height: 2.1rem;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn {
+    transition: .3s;
+
+    &.btn-transparent {
+        background: transparent;
+        outline: none;
+        border: none;
+
+        &:hover {
+            background: #fff;
+            color: #000;
+        }
+    }
+
+    &.btn-primary {
+        background: #fff;
+        font-weight: 400;
+        padding: 1.4rem 4rem;
+        font-size: 1.5rem;
+        border: 1px solid #000;
+        line-height: 2.1rem;
+        border-radius: 5px;
+        color: #000;
+
+        &:hover {
+            background: #000;
+            color: #fff;
+        }
+    }
+}
+
+button {
+    border-radius: 5px;
+}
